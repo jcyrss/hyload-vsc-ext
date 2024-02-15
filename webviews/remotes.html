@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="$webview-dir$/lib/split_1.6.5.min.js"></script>
+  
+
+  <title>Remote Machines</title>
+  <style>
+    html{
+      height: 100%;
+    }
+    body{
+      height: inherit;
+      padding: 0;
+      min-width: 650px;
+    }
+
+    #top{
+      height: inherit;
+    }
+
+    .split {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .gutter {
+        background-color: #eee;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    .gutter.gutter-horizontal {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+        cursor: col-resize;
+    }
+
+    .menu{
+      display:flex; 
+      gap: .5rem;
+      flex-direction:column;
+      /* background-color: #f2f9f3; */
+      padding: .8rem 0;
+      user-select: none; 
+    }
+    
+    .menu .item {
+      /* color: #605959; */
+      cursor: pointer;
+      padding: 0.2rem 1rem;    
+      font-size: .88rem;
+    }
+    
+    
+    .menu .item:hover {
+      background-color: #fbf0ea;
+      color: #1781c9;
+    }
+
+    .menu .seperator {
+      color: #605959;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    #machine{
+      display: grid;
+      grid-template-columns: 180px 300px 1fr;
+      gap: .5rem;
+      height: 250px;
+      padding: 1rem;
+    }
+
+    
+    #machine input {
+      height: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="split" id="top">
+    
+    <div id="leftpane">
+      <div id="machine">
+        <span>Host</span>     <input id="host" type="text" onchange="updateModel('host')"></input> <span>⭐</span>
+        <span>SSH Port</span> <input id="sshport" type="number" max="65535" min="1" value="22" onchange="updateModel('sshport')"></input> <span>⭐</span>
+        <span>User Name</span>   <input id="username" type="text" onchange="updateModel('username')"></input>  <span>⭐</span>
+        <span>SSH Private Key File Path</span> <input id="sshprikey" type="text" onchange="updateModel('sshprikey')" placeholder=""></input> <span></span>
+        <span>Password</span>     <input id="password" type="password" onchange="updateModel('password')" placeholder=""></input> <span></span>
+        <span>Python Executable Path</span>     <input id="pythonexe" type="text" onchange="updateModel('pythonexe')" value="python3"></input> <span>⭐</span>
+      </div>
+      
+      <div id="info" style="white-space: pre-wrap;padding: 1rem;color: #266783;">
+        
+      </div>
+    </div>
+    
+    <div id="menu" class="menu" >
+    </div>
+
+  </div>
+  
+</body>
+
+<script src="$webview-dir$/remotes.js"></script>
+</html>

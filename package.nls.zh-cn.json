@@ -1,0 +1,6 @@
+{
+	"hyloadExt.InitHyloadProject.title": "hyload - 初始化 Hyload 项目",
+	"hyloadExt.RealtimeMonitor.title": "hyload - 实时监控",
+	"hyloadExt.plotLoadTestStats.title": "hyload - 性能测试数据作图",
+	"hyloadExt.plotSysResUsage.title": "hyload - 系统资源使用作图"
+}

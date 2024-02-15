@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src * 'self'; 
+    style-src 'unsafe-inline' http: https: data: *;">
+
+  <script src="$webview-dir$/lib/react.production.min.js" ></script>
+  <script src="$webview-dir$/lib/react-dom.production.min.js"></script>
+  <script type='module' src="$webview-dir$/monitor.js"></script>
+
+  
+  <script src="$webview-dir$/lib/chart_4.3.0.umd.min.js"></script>
+  <style>
+  h1 {
+    color:red
+  }
+
+  button {
+    color: #4f5050;
+  }
+
+  .btn{
+    background-color: #218a8a;
+    padding: .2rem .4rem;
+    color: white;
+    cursor: pointer;
+    font-size: .8rem;
+    min-width: 3rem;
+    text-align: center;
+    user-select: none;
+  }
+
+
+  .btn-no-border{
+    cursor: pointer;
+    color: #207dbb;
+    font-size: .8rem;
+    /* padding: .2rem .4rem; */
+    /* border: 1px solid whitesmoke; */
+    user-select: none;
+    text-align: center;
+  }
+
+  .btn-no-border:hover{
+    /* border: 1px solid #218a8a; */
+    color: red;
+  }
+
+
+.btn-no-border.disable{
+  cursor: auto;
+  color: grey;
+}
+.btn-no-border.disable:hover{
+  color: grey;
+  border: 1px solid whitesmoke;
+}
+
+  #listenning-port{
+    color: steelblue;
+  }
+
+  main {
+    margin: 1rem;
+  }
+
+
+  .TitlePane {
+    padding: 0.5rem;
+    /* background-color: #ecf5ef; */
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    min-width: 700px;
+  }
+  
+  .infoPane {   
+    display: grid; 
+    gap: 0.4rem;
+    grid-template-rows: 400px auto 1fr;   
+  }
+  
+  .chartPane {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1rem;
+  }
+
+  .totalnumberPane{
+    padding: 1em;
+  }
+  
+  .statsPane {
+    position: relative;
+    padding: 1em;
+    background-color: #fcfcfa;
+    display: grid;
+    /* gap: 1.8em 1.3em; */
+    grid-template-columns: repeat(6, auto);
+  }
+  
+  
+  /* .statsPane_col {
+    width:  15%;
+    display: inline-block;
+  } */
+  
+  
+  .statsPane_col_item {
+    height: 2em;
+    display: block;
+  }
+
+  
+  #statsHubs {
+    padding: 0.5rem;
+    margin: 1rem 0 0 1rem;
+    /* background-color: #fbf5f2; */
+    width: 300px;
+  }
+  #statsHub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .statsHub-list-item{
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    gap: 0.3rem;
+  }
+
+  .statsHub-list-item .url {
+    cursor:pointer;
+    padding: 0 0 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+  }
+
+  .statsHub-list-item .url-active {
+    background-color: rgb(46 114 39);
+    color: white;
+  }
+  </style>
+  <title>realtime Monitor</title>
+</head>
+<body>
+  <main></main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <title>代码助手</title>
+  <style>
+    body{
+      padding: 0;
+    }
+
+    .menu{
+      display:flex; 
+      gap: .3rem;
+      flex-direction:column;
+      /* background-color: #f2f9f3; */
+      padding: .8rem 0;
+      user-select: none; 
+    }
+    
+    .menu .item {
+      /* color: #605959; */
+      cursor: pointer;
+      padding: 0.2rem 1rem;    
+      font-size: .88rem;
+    }
+    
+    
+    .menu .item:hover {
+      background-color: #fbf0ea;
+      color: #1781c9;
+    }
+
+    .menu .seperator {
+      color: #605959;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu" id="menu">
+    <!-- <div class="item" name="a1">助手1</div>
+    <div class="item" name="a2">助手2</div>
+    <div class="seperator"></div>
+    <div class="item" name="a4">助手4</div> -->
+  </div>
+</body>
+
+
+<script src="$webview-dir$/codehelper.js"></script>
+
+</html>
