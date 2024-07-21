@@ -537,7 +537,7 @@ class Monitor extends React.Component {
 
       <div className='statsPane_col'>
         <span key={1000} className='statsPane_col_item'>
-        {['Time', '时间'][ln]}
+        {['Time\\Number', '时间'][ln]}
         </span>
         
         {g_plot_sec_data.seconds.slice(0).reverse().map( (data, index) =>
@@ -550,7 +550,7 @@ class Monitor extends React.Component {
 
       <div className='statsPane_col'>
         <span key={1000} className='statsPane_col_item'>
-        {['Requet Num', '请求数'][ln]}
+        {['Requets', '请求数'][ln]}
         </span>
         {g_plot_sec_data.rps.slice(0).reverse().map( (data, index) =>
         <span key={index} className='statsPane_col_item'>
@@ -561,7 +561,7 @@ class Monitor extends React.Component {
 
       <div className='statsPane_col'>
         <span key={1000} className='statsPane_col_item'>
-        {['Response Num', '响应数'][ln]}
+        {['Responses', '响应数'][ln]}
         </span>
         {g_plot_sec_data.tps.slice(0).reverse().map( (data, index) =>
         <span key={index} className='statsPane_col_item'>
@@ -572,7 +572,7 @@ class Monitor extends React.Component {
 
       <div className='statsPane_col'>
         <span key={1000} className='statsPane_col_item'>
-        {['Timeout Num', '超时数'][ln]}
+        {['Timeouts', '超时数'][ln]}
         </span>
         {g_plot_sec_data.tops.slice(0).reverse().map( (data, index) =>
         <span key={index} className='statsPane_col_item'>
@@ -584,7 +584,7 @@ class Monitor extends React.Component {
       
       <div className='statsPane_col'>
         <span key={1000} className='statsPane_col_item'>
-        {['Error Num', '错误数'][ln]}
+        {['Errors', '错误数'][ln]}
         </span>
         {g_plot_sec_data.eps.slice(0).reverse().map( (data, index) =>
         <span key={index} className='statsPane_col_item'>

@@ -97,23 +97,23 @@
   .statsPane {
     position: relative;
     padding: 1em;
-    background-color: #fcfcfa;
+    /*background-color: #fcfcfa;*/
     display: grid;
     /* gap: 1.8em 1.3em; */
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(6, 140px);
   }
   
   
-  /* .statsPane_col {
-    width:  15%;
-    display: inline-block;
-  } */
+  .statsPane_col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+  } 
   
   
-  .statsPane_col_item {
+  /* .statsPane_col_item {
     height: 2em;
-    display: block;
-  }
+  } */
 
   
   #statsHubs {
